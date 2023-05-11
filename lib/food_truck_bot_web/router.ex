@@ -7,11 +7,18 @@ defmodule FoodTruckBotWeb.Router do
     plug :fetch_live_flash
     plug :put_root_layout, {FoodTruckBotWeb.Layouts, :root}
     plug :protect_from_forgery
-    plug :put_secure_browser_headers
+    plug :put_secure_browser_headers, %{"content-security-policy" => "default-src 'self'"}
   end
 
   pipeline :api do
     plug :accepts, ["json"]
+  end
+
+  scope "/healthz", FoodTruckBotWeb do
+    get "/", HealthController, :index
+    get "/startup", HealthController, :startup
+    get "/liveness", HealthController, :liveness
+    get "/readiness", HealthController, :readiness
   end
 
   scope "/", FoodTruckBotWeb do
