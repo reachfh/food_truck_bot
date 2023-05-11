@@ -1,5 +1,10 @@
 # FoodTruckBot
 
+This synchronizes food truck data from the San Francisco government website into a local database.
+
+https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/data
+
+
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies
