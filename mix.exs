@@ -117,17 +117,17 @@ defmodule FoodTruckBot.MixProject do
         "credo --all",
         "hex.audit",
         "deps.audit",
-        "sobelow --exit",
-        "dialyzer --halt-exit-status"
+        "sobelow",
+        "dialyzer"
       ],
       "quality.ci": [
         "format --check-formatted",
         "deps.unlock --check-unused",
+        "credo --all",
         "hex.audit",
         "deps.audit",
-        "credo --all",
         "sobelow --exit",
-        "dialyzer --halt-exit-status"
+        "dialyzer"
       ],
       deploy: [
         "release --overwrite",
