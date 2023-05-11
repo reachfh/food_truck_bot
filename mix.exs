@@ -38,6 +38,7 @@ defmodule FoodTruckBot.MixProject do
       {:floki, ">= 0.30.0", only: :test},
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
+      {:nimble_csv, "~> 1.2"},
       {:phoenix, "~> 1.7.2"},
       {:phoenix_ecto, "~> 4.4"},
       {:phoenix_html, "~> 3.3"},
