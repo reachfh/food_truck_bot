@@ -33,5 +33,35 @@ food_truck_bot-*.tar
 
 # In case you use Node.js/npm, you want to ignore these.
 npm-debug.log
+
+# The directory NPM downloads your dependencies sources to.
 /assets/node_modules/
 
+/.elixir_ls
+/.env
+/.envrc
+/.gitconfig
+/.gnupg/
+/.hex/
+/.mix/
+/.ssh/
+/.vscode-server/
+/.vscode/
+/tmp/
+/dregsy.yml
+
+/artifacts/
+/reports/
+/junit-reports/
+/sarif-reports/
+
+# Editor temp files
+*.swp
+
+# OS files when mounting dev container
+/.bash_history
+/.dotnet
+/.ssh
+
+# macOS junk
+.DS_Store
