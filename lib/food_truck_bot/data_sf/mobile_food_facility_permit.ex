@@ -1,6 +1,5 @@
 defmodule FoodTruckBot.DataSF.MobileFoodFacilityPermit do
-  @moduledoc """
-  """
+  @moduledoc false
 
   @spec parse_csv(binary()) :: {:ok, list(map())}
   def parse_csv(csv) do
