@@ -43,7 +43,7 @@ defmodule FoodTruckBot.Truck.Location do
       :address,
       # :permit,
       :status,
-      :food_items,
+      :food_items
       # :latitude,
       # :longitude,
       # :days,

@@ -101,5 +101,4 @@ defmodule FoodTruckBot.Truck do
   def change_location(%Location{} = location, attrs \\ %{}) do
     Location.changeset(location, attrs)
   end
-
 end

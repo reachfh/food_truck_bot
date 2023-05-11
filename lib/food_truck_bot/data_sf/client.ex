@@ -11,13 +11,13 @@ defmodule FoodTruckBot.DataSF.Client do
 
   plug Tesla.Middleware.BaseUrl, @base_url
 
-  @spec get_mobile_food_facility_permits() :: {:ok, list(map())} | {:error, binary() | Tesla.Env.t()}
+  @spec get_mobile_food_facility_permits() ::
+          {:ok, list(map())} | {:error, binary() | Tesla.Env.t()}
   def get_mobile_food_facility_permits() do
-
     case get("/api/views/rqzj-sfat/rows.csv") do
       {:ok, %{status: 200, body: ""}} ->
         {:error, "no data"}
-      
+
       {:ok, %{status: 200, body: body}} ->
         {:ok, data} = FoodTruckBot.DataSF.MobileFoodFacilityPermit.parse_csv(body)
 
@@ -32,5 +32,4 @@ defmodule FoodTruckBot.DataSF.Client do
         result
     end
   end
-
 end
